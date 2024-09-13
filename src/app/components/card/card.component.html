@@ -1,0 +1,41 @@
+<div class="ticket-card">
+  <div class="d-flex gap-3 align-items-center">
+    <div class=" d-flex justify-content-start w-25">
+      <button class="btn text-light" [pTooltip]="tooltipContent" tooltipPosition="bottom">
+        <span class="material-icons"><i class="fa-solid fa-trash"></i></span>
+        <ng-template #tooltipContent>
+          <div class="flex align-items-center">
+            <span> حذف</span>
+          </div>
+        </ng-template>
+      </button>
+    </div>
+
+    <div class="title-header">عرض التذكرة الخاصة بالفيلم</div>
+  </div>
+
+
+  <div class="link" (click)="onCopy()">
+    <i class="fa-solid fa-copy"></i><a class="text-black" href="www.tazkty.com/473847"> www.tazkty.com/473847</a>
+  </div>
+  <div class="valid-until">
+    <p>فعال حتي 15 يوليو 2023</p>
+  </div>
+
+  <div class="qr-code">
+    <qrcode [qrdata]="link" [width]="2" [errorCorrectionLevel]="'M'"></qrcode>
+
+
+    <div class="discount">
+      <button class="btn  border-1 me-4  border border-light text-light align-self-end mb-3">
+        مشاركه <i class="fa-solid fa-share"></i>
+      </button>
+      <div>
+        <p>خصم </p>
+        <p>25%</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
